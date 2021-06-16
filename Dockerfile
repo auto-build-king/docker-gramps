@@ -27,6 +27,7 @@ RUN apt-get update \
     python3-pip \
     xdg-utils \
     xvfb \
+    python3-icu \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
@@ -34,4 +35,4 @@ ADD https://github.com/gramps-project/gramps/releases/download/v5.1.2/gramps_5.1
 RUN dpkg -i /tmp/gramps.deb \
  && rm /tmp/gramps.deb
 
-CMD gramps
+#CMD gramps
